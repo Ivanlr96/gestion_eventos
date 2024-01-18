@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('user_details', function (Blueprint $table) {
             $table->id();
-            $table->user_id();
+            //$table->foreingnId('user_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('direccion');
             $table->string('telefono');
             $table->timestamp('create_at')->nullable();
