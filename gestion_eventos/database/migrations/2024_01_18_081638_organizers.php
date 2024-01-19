@@ -14,8 +14,7 @@ return new class extends Migration
         $table->id();
         $table->string('nombre');
         $table->string('contacto');
-        $table->timestamp('create_at')->nullable();
-        $table->timestamp('update_at')->nullable();
+        $table->timestamps();
 
     });
 }

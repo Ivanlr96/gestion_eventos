@@ -18,8 +18,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('direccion');
             $table->string('telefono');
-            $table->timestamp('create_at')->nullable();
-            $table->timestamp('update_at')->nullable();
+            $table->timestamps();
         });
     }
 

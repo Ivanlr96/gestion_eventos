@@ -14,8 +14,7 @@ return new class extends Migration
         $table->id();
         $table->string('nombre');
         $table->string('email')->unique();
-        $table->timestamp('create_at')->nullable();
-        $table->timestamp('update_at')->nullable();
+        $table->timestamps();
     });
 }
 

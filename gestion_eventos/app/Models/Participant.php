@@ -10,6 +10,6 @@ class Participant extends Model
     use HasFactory;
     public function event()
     {
-        return $this->hasMany(Event::class);
+        return $this->belongsToMany(Event::class);
     }
 }

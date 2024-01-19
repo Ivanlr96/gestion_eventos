@@ -17,8 +17,7 @@ return new class extends Migration
         $table->string('nombre_evento');
         $table->date('fecha');
         $table->string('ubicacion');
-        $table->timestamp('create_at')->nullable();
-        $table->timestamp('update_at')->nullable();
+        $table->timestamps();
     });
 }
 

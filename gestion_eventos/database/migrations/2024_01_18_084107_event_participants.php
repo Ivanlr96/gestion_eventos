@@ -16,8 +16,7 @@ return new class extends Migration
         $table->unsignedBigInteger('participant_id');
         $table->foreign('participant_id')->references('id')->on('users')->onDelete('cascade');
         $table->primary(['event_id', 'participant_id']);
-        $table->timestamp('create_at')->nullable();
-        $table->timestamp('update_at')->nullable();
+        $table->timestamps();
     });
 }
     /**
