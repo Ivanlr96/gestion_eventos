@@ -13,7 +13,7 @@ return new class extends Migration
     {Schema::create('events', function (Blueprint $table) {
         $table->id();
         $table->unsignedBigInteger('organizer_id');
-        $table->foreign('organizer_id')->references('id')->on('users')->onDelete('cascade');
+        $table->foreign('organizer_id')->references('id')->on('organizers')->onDelete('cascade');
         $table->string('nombre_evento');
         $table->date('fecha');
         $table->string('ubicacion');
